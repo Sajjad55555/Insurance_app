@@ -1,0 +1,72 @@
+import Image from 'next/image';
+import { HiChevronDown } from 'react-icons/hi'; // Down icon import
+
+
+interface ProfileCardProps {
+  name: string;
+  age: string;
+  description: string;
+  imageUrl: string;
+  isSelected: boolean;
+}
+const ProfileCard: React.FC<ProfileCardProps> = ({ 
+  name, 
+  age, 
+  description, 
+  imageUrl,
+  isSelected 
+}) => {
+  return (
+    <div className={`w-full  md:border-4 ${
+      isSelected ? "border-[#150f96] "  : "md:border-gray-200" // Light gray border
+    } md:rounded-2xl md:shadow-lg flex content-center `}>
+      
+      <div className="md:w-[400px] w-full h-auto md:h-[550px] justify-center gap-3 items-center flex flex-row  md:flex-col">
+        {/* Title - Black text forced */}
+       
+        {/* Image with light gray border */}
+        <div className="flex justify-center gap-7  items-center flex-col  ">
+        <div className="text-[15px] font-sans  md:text-[35px] md:font-bold text-gray-900 items-center order-2 md:order-1 flex flex-col mt-2 ">
+          {name}
+        </div>
+    <div className='md:order-2  w-[70px] h-[70px] md:w-[150px] md:h-[150px] order-1'>
+          <Image
+            src={imageUrl}
+            alt="Profile Picture"
+            width={150}
+            height={150}
+            className="rounded-full border-4 border-gray-200" // Light border
+          />
+          </div>
+        </div>
+
+        {/* Info Section - Dark gray text */}
+        <div className='px-2 flex flex-col gap-6'>
+        <div className="md:text-center flex flex-col gap-6 ">
+          <h2 className=" text-[15px]  md:text-[25px] font-semibold text-black md:text-gray-900">
+            {name}({age})
+          </h2>
+          <p className="text-gray-700 font-medium  w-[240px]  text-[10px]  md:text-[20px] ">{description}</p>
+        </div>
+
+        {/* Button - Blue when selected */}
+        <div className="flex  items-center  md:items-center border   rounded-lg  md:mx-auto  w-[250px]   md:mb-4">
+          <button className={` justify-center items-center md:items-center flex w-full text-[28.5px] font-semibold md:h-[60px] ${
+            isSelected 
+              ? "md:bg-[#150f96]  md:text-white" 
+              : "md:bg-gray-100 md:text-gray-700"
+          } md:rounded-lg font-medium md:border-2 ${
+            isSelected ? "md:border-[#150f96] " : "md:border-gray-200"
+          } transition-all`}>
+            보장 확인
+          </button>
+          <HiChevronDown className="text-[40px] text-black  md:hidden  " />
+ 
+          
+        </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+export default ProfileCard;
