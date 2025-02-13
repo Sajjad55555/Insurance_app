@@ -48,16 +48,14 @@ export default function Model_Handel() {
           </div>
           <button
             onClick={() => openModel(2)}
-            className="px-6 py-3 bg-[#FFD400] text-black font-bold rounded-lg"
+            className=" h-[60px] w-[150px] bg-[#FFD400] text-black font-bold rounded-xl"
           >
-            Button 2
-          </button>
+          가입 상담 신청          </button>
           <button
             onClick={() => openModel(3)}
-            className="px-6 py-3 bg-[#FFD400] font-bold text-black rounded-lg"
+            className="h-[60px] w-[150px]   bg-[#FFD400]  font-bold text-black rounded-xl"
           >
-            Button 3
-          </button>
+보험료 확인          </button>
         </div>
       </div>
 
@@ -73,7 +71,7 @@ export default function Model_Handel() {
               animate={{ y: 0 }}
               exit={{ y: "100%" }}
               transition={{ type: "spring", damping: 20, stiffness: 100 }}
-              className="w-full h-auto bg-white rounded-t-3xl overflow-y-auto"
+              className="w-full h-auto bg-white rounded-t-[30.35px] overflow-y-auto"
               onClick={(e) => e.stopPropagation()}
             >
               <div className="flex justify-end mb-4">
