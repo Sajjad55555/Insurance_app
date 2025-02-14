@@ -63,12 +63,11 @@ export default function Header() {
               clickable: true,
             }}
             modules={[Pagination, Autoplay]}
-            className="mySwiper  p-2 bg-[#ebf3fe]  border  md:w-full rounded-2xl"
-            style={{ width: '100%', height: '100%' }}
+            className="mySwiper  p-2 bg-[#ebf3fe] md:w-[95%]  border  rounded-2xl"
           >
             {swiperData.map((data, index) => (
               <SwiperSlide key={index}>
-                <div className="top3-border  flex h-[200px] md:h-[300px] md:px-2 items-center justify-center md:w-full bg-[#ebf3fe] rounded-[10px]">
+                <div className="top3-border w-full  flex h-[200px] md:h-[300px] md:px-2 items-center justify-center bg-[#ebf3fe] rounded-[10px]">
                   <div className="flex flex-col w-3/4">
                     <p className="nexonReg-font text-black text-[13px]  md:text-[1.5rem] space-y-4 font-[900]">
                       {data.text1}
