@@ -18,8 +18,8 @@ export default function Body() {
       </div>
 
       {/* Recommendation Heading */}
-      <div className="w-full flex items-center mt- md:mt-24 justify-center my- md:my-12">
-        <div className="w-full md:w-[80%] bg-blue-50 py-4  "> {/* Soft blue background */}
+      <div className="w-full flex items-center  md:mt-24 justify-center my- md:my-12">
+        <div className="w-full md:w-[80%] bg-blue-50 py-4  "> 
           <h1 className="text-xl md:text-3xl font-bold text-blue-800 text-center">
             이런 분들에게 추천합니다!
           </h1>
