@@ -63,7 +63,7 @@ export default function Header() {
               clickable: true,
             }}
             modules={[Pagination, Autoplay]}
-            className="mySwiper  p-2 bg-[#ebf3fe] md:w-[95%]  border  rounded-2xl"
+            className="mySwiper  p-2 bg-[#ebf3fe] md:w-[90%]  border  rounded-2xl"
           >
             {swiperData.map((data, index) => (
               <SwiperSlide key={index}>
